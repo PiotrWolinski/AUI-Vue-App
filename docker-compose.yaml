@@ -1,0 +1,29 @@
+version: '3.7'
+
+services:
+  cars:
+    build: "cars"
+    expose:
+      - "8082"
+
+  users:
+    build: "users"
+    expose:
+      - "8081"
+    depends_on:
+      - "cars"
+
+  gateway:
+    build: "gateway"
+    expose:
+      - "8080"
+
+  frontend:
+    build: "frontend/app"
+    expose:
+      - "8083"
+
+  proxy:
+    build: "proxy"
+    ports: 
+      - "80:80"

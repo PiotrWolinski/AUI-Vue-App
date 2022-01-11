@@ -1,0 +1,74 @@
+GET http://localhost:8080/api/cars
+
+###
+
+GET http://localhost:8082/api/cars/1
+
+###
+
+GET http://localhost:8082/api/cars/4
+
+###
+
+GET http://localhost:8080/api/users
+
+###
+
+GET http://localhost:8080/api/users/admin
+
+###
+
+GET http://localhost:8080/api/users/CarWow
+
+###
+
+GET http://localhost:8080/api/users/admin/cars
+
+###
+
+GET http://localhost:8080/api/users/CarWow/cars
+
+###
+
+GET http://localhost:8080/api/users/admin/cars/2
+
+###
+
+GET http://localhost:8080/api/users/admin/cars/3
+
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "login": "Johny",
+  "name": "John",
+  "surname": "Nebraska",
+  "birthDate": "1985-12-01",
+  "password": "Pasword",
+  "email": "johny.contact@gmail.com"
+}
+
+###
+
+POST http://localhost:8080/api/users/admin/cars
+Content-Type: application/json
+
+{
+  "name": "Rimac Nevera",
+  "wheels": 4,
+  "seats": 2,
+  "maxSpeed": 340,
+  "doors": 2,
+  "user": "admin",
+  "engine": "V8 Biturbo"
+}
+
+###
+
+DELETE http://localhost:8080/api/users/Johny
+
+###
+
+DELETE http://localhost:8080/api/users
